@@ -3,17 +3,19 @@ package dal.gravity;
 /**
  * Represents a pendulum
  */
-public class RegularPendulum extends AbstractEarthPendulum {
+public class RegularPendulum{
     private double delta, iterations = 0;
     private double dissipation;
     private double lastTheta, lastVel, lastAccel;
 
     /**
      * Creates a new Pendulum instance 
+     * 
      */
+
     public RegularPendulum (double inLength, double inMass, double inTheta0, 
 		     double inDelta, double inDiss) {
-	super (inLength, inMass, inTheta0);
+	//super (inLength, inMass, inTheta0);
 	delta=inDelta;
 	dissipation = inDiss;
 	lastVel = 0;
@@ -39,5 +41,12 @@ public class RegularPendulum extends AbstractEarthPendulum {
     public double getLastTime () { return iterations*delta; }
     public double getDissipationConstant () { return dissipation; }
     
+    public double getMaxAngularDisplacement () { return theta0; }
 
+    public double getPointMass () { return pointMass; }
+
+    public double getStringLength () { return stringLength; }
+
+    public double getGravitationalField () { return g; }
+    
 }

@@ -18,6 +18,6 @@ public abstract class AbstractEarthPendulum extends AbstractPendulum {
     public AbstractEarthPendulum (double inLength, double inMass, double inTheta0) {
 	super (inLength, inMass, inTheta0, GRAVITY);
     }
-
 }
+
 
